@@ -122,9 +122,9 @@ Dilihat dari _Tabel 1. Informasi Dataset_ dataset ini berisi informasi sebagai b
 
 ![EDA Describe Data](https://github.com/user-attachments/assets/1fb877bd-18b8-499b-8db8-962e233df494)
 
-Gambar 2. Informasi Dataset
+Gambar 2. Penjelasan Dataset
 
-Gambar 2 merupakan informasi mengenai dataset yang digunakan
+Gambar 2 merupakan penjelasan mengenai dataset yang digunakan
 - **Kolom `year`** mencatat tahun pembuatan kendaraan. Rata-rata tahun pembuatan kendaraan adalah 2023, dengan sebagian besar kendaraan dibuat pada tahun 2024. Rentang tahun berada antara 2023 hingga 2025, yang menunjukkan bahwa dataset ini sebagian besar terdiri dari kendaraan terbaru.
 - **Kolom `price`** mencatat harga kendaraan dalam dolar. Rata-rata harga kendaraan adalah $50,202.99, dengan harga minimum mencapai $0, yang bisa jadi disebabkan oleh data yang hilang atau salah input. Harga maksimum mencapai $195,895, yang menunjukkan adanya kendaraan dengan harga jauh lebih tinggi, mungkin karena model premium atau kendaraan khusus. Sebagian besar harga berada di kisaran $36,900 hingga $58,717, mencerminkan harga kendaraan yang lebih umum di pasar.
 - **Kolom `cylinders`** mencatat jumlah silinder pada mesin kendaraan. Rata-rata jumlah silinder adalah 4.98, dengan sebagian besar kendaraan memiliki 4 atau 6 silinder. Ada juga beberapa kendaraan yang memiliki 8 silinder, meskipun jumlahnya relatif sedikit. Nilai minimum untuk jumlah silinder adalah 0, yang kemungkinan disebabkan oleh data yang tidak valid.
