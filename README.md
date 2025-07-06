@@ -1,4 +1,4 @@
-![{3D4543A2-6562-4B86-89FA-7FB81E00F0C2}](https://github.com/user-attachments/assets/c49a6e7e-918b-4c26-956f-d003c9b9d183)# Laporan Proyek Machine Learning - Azel Fabian Azmi
+# Laporan Proyek Machine Learning - Azel Fabian Azmi
 
 Proyek ini bertujuan membangun model machine learning untuk memprediksi harga mobil berdasarkan berbagai fitur kendaraan seperti tahun, transmisi, bahan bakar, jarak tempuh, warna, dan lainnya.
 
@@ -91,7 +91,9 @@ Masalah lainnya adalah adanya perbedaan harga yang besar antara kendaraan dengan
 
 
 Tabel 1. Informasi Dataset
+
 ![data info](https://github.com/user-attachments/assets/99ab422f-f692-40f8-85a0-8b33762b59da)
+
 
 Dilihat dari _Tabel 1. Informasi Dataset_ dataset ini berisi informasi sebagai berikut ini : 
 - Dataset berupa CSV (Comma-Seperated Values).
