@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Azel Fabian Azmi
+![{3D4543A2-6562-4B86-89FA-7FB81E00F0C2}](https://github.com/user-attachments/assets/c49a6e7e-918b-4c26-956f-d003c9b9d183)# Laporan Proyek Machine Learning - Azel Fabian Azmi
 
 Proyek ini bertujuan membangun model machine learning untuk memprediksi harga mobil berdasarkan berbagai fitur kendaraan seperti tahun, transmisi, bahan bakar, jarak tempuh, warna, dan lainnya.
 
@@ -91,8 +91,7 @@ Masalah lainnya adalah adanya perbedaan harga yang besar antara kendaraan dengan
 
 
 Tabel 1. Informasi Dataset
-
-![data info](https://github.com/user-attachments/assets/f8d6a72f-61a5-4980-b65a-e15cb18e7672)
+![data info](https://github.com/user-attachments/assets/99ab422f-f692-40f8-85a0-8b33762b59da)
 
 Dilihat dari _Tabel 1. Informasi Dataset_ dataset ini berisi informasi sebagai berikut ini : 
 - Dataset berupa CSV (Comma-Seperated Values).
@@ -118,8 +117,7 @@ Dilihat dari _Tabel 1. Informasi Dataset_ dataset ini berisi informasi sebagai b
 - drivetrain (categorical): Tipe drivetrain kendaraan, seperti penggerak empat roda (4WD) atau penggerak dua roda (FWD).
 
 ### Informasi Dataset
-
-![EDA Describe Data](https://github.com/user-attachments/assets/a16f241c-5bf7-481e-981a-4a12de5b5b95)
+![EDA Describe Data](https://github.com/user-attachments/assets/1fb877bd-18b8-499b-8db8-962e233df494)
 
 Gambar 2. Informasi Dataset
 
@@ -133,90 +131,65 @@ Gambar 2 merupakan informasi mengenai dataset yang digunakan
 
 ### Pengecekan Data Duplikat dan Missing Value
 -	Data Duplikat
-
-![Data Duplikat](https://github.com/user-attachments/assets/37a175dc-0bb1-4f2b-adc3-62633b70910b).
-
+![Data Duplikat](https://github.com/user-attachments/assets/9e166ea6-33d5-4cbc-b838-ee83b7b10b60)
 Gambar 3. Data Duplikat.
 
 Pada gambar tersebut, menjelaskan bahwa pada dataset ini memiliki 24 data yang terduplikat.
 
 -	Missing Value
-  
-![Missing Value](https://github.com/user-attachments/assets/d26dab42-0e22-46db-a4c1-12d9c9a29c09).
-
+![Missing Value](https://github.com/user-attachments/assets/d9506df0-7468-4555-ad9e-6f8154775519)
 Gambar 4. Missing Value
 
 Pada gambar tersebut, menjelaskan bahwa pada dataset ini memiliki banyak missing value.
 
 Dengan adanya data terduplikat dan missing value, maka dilakukannya pengisian/penghapusan terhadap nilai tersebut untuk data menjadi bersih.
-
-![Data Bersih](https://github.com/user-attachments/assets/37a175dc-0bb1-4f2b-adc3-62633b70910b).
-
+![Data Bersih](https://github.com/user-attachments/assets/a38f12fd-864f-4144-891c-0f76a21341e6)
 Gambar 5. Data Bersih
 
 ### Pengecekan Value Unik yang Ada Pada Dataset
 
-![Value Unik](https://github.com/user-attachments/assets/6d5c13c1-3b5f-46a3-a3da-b1d4bea41f92).
-
+![Value Unik](https://github.com/user-attachments/assets/209cb64c-37e9-4e7d-a26d-e48f8162a84f)
 Gambar 6. Value Unik
 
 Berdasarkan gambar di atas, berikut adalah deskripsi singkat mengenai banyaknya nilai unik dari masing-masing fitur dalam dataset:
-
 - price (860 unique values)
 Menunjukkan variasi harga kendaraan, dengan 860 nilai unik yang mencerminkan spektrum harga yang luas. Ini menunjukkan bahwa hampir setiap kendaraan memiliki harga berbeda, menandakan keberagaman pasar mobil bekas.
-
 - description (762 unique values)
 Merupakan deskripsi bebas yang dituliskan untuk kendaraan. Nilai unik yang tinggi (762) menandakan bahwa deskripsi ini sangat bervariasi dan bersifat unik per entri. Fitur ini sulit digunakan dalam model kecuali diolah lebih lanjut (misalnya dengan NLP).
-
 - name (358 unique values)
 Menyatakan nama spesifik kendaraan. Nilai unik yang cukup tinggi (358) menunjukkan beragamnya jenis kendaraan yang tersedia.
-
 - exterior_color (263 unique values)
 Menggambarkan variasi warna luar kendaraan. Dengan 263 nilai unik, terdapat banyak variasi penamaan atau kombinasi warna yang berbeda, kemungkinan termasuk deskripsi warna kustom.
-
 - trim (197 unique values)
 Merujuk pada tipe atau versi dari suatu model kendaraan. Banyaknya nilai unik menunjukkan variasi varian mobil dalam dataset.
-
 - model (153 unique values)
 Mewakili model kendaraan. Terdapat 153 model berbeda, yang mencerminkan keberagaman produk dalam dataset.
-
 - engine (100 unique values)
 Menunjukkan variasi kapasitas mesin atau jenis mesin. Nilai ini mengindikasikan keberagaman dalam performa mesin yang ditawarkan.
-
 - mileage (96 unique values)
 Menyatakan jarak tempuh kendaraan. 96 nilai unik menunjukkan variasi kondisi penggunaan kendaraan bekas.
-
 - interior_color (91 unique values)
 Menggambarkan variasi warna interior mobil, yang dapat mempengaruhi preferensi konsumen terhadap estetika.
-
 - transmission (38 unique values)
 Menyatakan tipe transmisi kendaraan. Nilai ini tampaknya termasuk beberapa penamaan ulang atau variasi gaya penulisan (misalnya “Automatic” vs “Auto”).
-
 - make (28 unique values)
 Mewakili merek kendaraan. Terdapat 28 merek berbeda yang tercakup dalam dataset.
-
 - body (8 unique values)
 Merujuk pada bentuk bodi kendaraan seperti sedan, SUV, coupe, dll. Ini merupakan kategori yang cukup standar dalam dunia otomotif.
-
 - fuel (7 unique values)
 Menyatakan jenis bahan bakar seperti bensin, solar, listrik, hybrid, dll. 7 jenis bahan bakar menunjukkan adanya tren kendaraan energi alternatif juga.
-
 - cylinders (6 unique values)
 Mengindikasikan jumlah silinder pada mesin kendaraan. Variasi ini memengaruhi performa dan efisiensi bahan bakar.
-
 - doors (5 unique values)
 Menunjukkan jumlah pintu kendaraan (misalnya 2, 4, atau 5 pintu). Cukup konsisten dengan desain umum kendaraan.
-
 - drivetrain (4 unique values)
 Menggambarkan sistem penggerak seperti FWD, RWD, AWD, dan 4WD. Ini memengaruhi pengalaman berkendara dan performa di berbagai kondisi jalan.
-
 - year (3 unique values)
 Merupakan tahun produksi kendaraan. Nilai unik yang hanya 3 kemungkinan menunjukkan bahwa dataset hanya mencakup mobil dari tiga tahun produksi tertentu.
 
 ### EDA - Multivariate Analysis
 
-![Gambar Corrmap](https://github.com/user-attachments/assets/ac5c168c-5b54-49a4-9a76-818910235c61).
-
+![Gambar Corrmap](https://github.com/user-attachments/assets/ee986052-5724-4fb6-be36-063274aed226)
 Gambar 7. Heatmap Korelasi
 
 Heatmap pada gambar 7 ini menggambarkan korelasi antar fitur numerik seperti `year`, `price`, `cylinders`, `mileage`, dan `doors`. Temuan utama:
@@ -224,8 +197,7 @@ Heatmap pada gambar 7 ini menggambarkan korelasi antar fitur numerik seperti `ye
 - Korelasi negatif antara `mileage` dan `price` menegaskan bahwa semakin tinggi jarak tempuh, biasanya harga kendaraan lebih rendah.
 - Fitur seperti `cylinders` memiliki korelasi lemah terhadap harga, namun tetap bisa relevan untuk model prediksi.
 
-![Price - Body v DT](https://github.com/user-attachments/assets/4d527e17-515d-47d7-aa22-e8899fc6222e)
-
+![Price - Body v DT](https://github.com/user-attachments/assets/6cbaa169-46e5-4927-831a-1c887159f719)
 Gambar 8. Harga berdasarkan Jenis Body dan Drivetrain
 
 Gambar 8 menunjukkan distribusi harga kendaraan berdasarkan jenis body (`body`) dan drivetrain (`drivetrain`). Hasil pengamatan menunjukkan:
@@ -233,8 +205,7 @@ Gambar 8 menunjukkan distribusi harga kendaraan berdasarkan jenis body (`body`) 
 - **Pickup Truck** cenderung memiliki median harga yang tinggi, dan sering dikombinasikan dengan drivetrain `Four-wheel Drive`.
 - Tipe drivetrain juga memberikan pengaruh yang signifikan terhadap harga, di mana kendaraan dengan `All-wheel Drive` atau `Four-wheel Drive` cenderung memiliki harga lebih tinggi dibandingkan `Front-wheel Drive`.
 
-![Mil v Price - fuel](https://github.com/user-attachments/assets/4d527e17-515d-47d7-aa22-e8899fc6222e)
-
+![Mil v Price - fuel](https://github.com/user-attachments/assets/5053b55e-995d-43fd-972d-cfe82899eb3a)
 Gambar 9. Mileage vs Price berdasarkan Jenis Bahan Bakar
 
 Gambar 9 menunjukkan hubungan antara `mileage` (jarak tempuh) dan `price` (harga kendaraan), dengan pewarnaan (`hue`) berdasarkan jenis bahan bakar (`fuel`). Dari grafik terlihat bahwa:
@@ -244,14 +215,12 @@ Gambar 9 menunjukkan hubungan antara `mileage` (jarak tempuh) dan `price` (harga
 
 ### EDA - Univariate Analysis
 
-![price hist](https://github.com/user-attachments/assets/ada04ab3-2ef3-4bf6-b706-0b1551337910)
-
+![price hist](https://github.com/user-attachments/assets/0e4715fd-3a50-4b48-b11d-1af6c936151f)
 Gambar 10. Distribusi Harga Kendaraan
 
 Gambar 10 memperlihatkan distribusi harga dari seluruh kendaraan dalam dataset. Mayoritas kendaraan memiliki harga di kisaran **$30.000 hingga $60.000**, dengan penurunan frekuensi pada harga-harga yang lebih tinggi. Kurva KDE (Kernel Density Estimate) menunjukkan bahwa distribusi cenderung miring ke kanan, mengindikasikan adanya sejumlah kendaraan dengan harga yang jauh lebih tinggi (outlier).
 
-![10 vehicle](https://github.com/user-attachments/assets/ada04ab3-2ef3-4bf6-b706-0b1551337910)
-
+![10 vehicle](https://github.com/user-attachments/assets/704dbec7-1a64-42bc-9c1d-2511a253619a)
 Gambar 11. 10 Merek Kendaraan Terbanyak
 
 Gambar 11 menunjukkan sepuluh merek kendaraan yang paling banyak muncul dalam dataset. **Jeep, RAM, dan Dodge** mendominasi jumlah entri. Hal ini menunjukkan bahwa dataset memiliki dominasi merek tertentu yang kemungkinan berasal dari dealer atau sumber data spesifik. Informasi ini penting karena merek dapat menjadi salah satu faktor utama dalam model prediksi harga.
