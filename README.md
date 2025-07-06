@@ -366,6 +366,17 @@ Berikut adalah hasil evaluasi dari keempat model regresi yang digunakan:
 - **Decision Tree** juga memberikan hasil yang cukup baik, meskipun masih sedikit lebih tinggi error-nya dibanding Random Forest.
 - **Linear Regression dan KNN** menunjukkan performa yang relatif lebih buruk karena kemungkinan tidak mampu menangkap hubungan non-linear dalam data.
 
+## Visualisasi Hasil Model
+
+Untuk melengkapi evaluasi kuantitatif, dilakukan visualisasi hasil prediksi dari masing-masing model dibandingkan dengan nilai aktual. Visualisasi ini membantu dalam melihat pola kesalahan model dan seberapa dekat prediksi dengan nilai sebenarnya.
+
+![model vis](https://github.com/user-attachments/assets/6b046f30-e2e0-4456-a395-f3becd825dc6)
+
+Pada gambar 15, terlihat visualisasi prediksi harga kendaraan dari ke-empat model tersebut. Diinterpretasikan bahwa:
+- **Random Forest** memiliki prediksi yang paling mendekati nilai aktual, terlihat dari sebaran titik yang paling mendekati garis diagonal pada scatter plot.
+- Error pada Random Forest tersebar relatif merata dengan puncak di sekitar 0, menunjukkan performa model yang stabil.
+- **Linear Regression** dan **KNN** menunjukkan pola error yang lebih lebar, menandakan ketidakmampuan mereka dalam menangkap kompleksitas data kendaraan.
+
 Model dengan performa terbaik yaitu **Random Forest** direkomendasikan untuk diimplementasikan dalam sistem prediksi harga kendaraan pada tahap selanjutnya.
 
 ---
