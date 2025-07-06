@@ -309,17 +309,16 @@ Linear Regression mencoba mencari garis terbaik yang memetakan hubungan antara f
 - Model ini digunakan dengan parameter default (tanpa tuning).
 - Tidak dilakukan regularisasi khusus karena fokus pada baseline.
 
-### 2. **K-Nearest Neighbors Regressor (KNN)**
+### 2. **Random Forest Regressor**
 
-**KNN Regressor** memprediksi harga kendaraan berdasarkan rata-rata dari `k` tetangga terdekat dalam ruang fitur.
+**Random Forest** adalah model ensemble yang menggabungkan banyak Decision Tree untuk menghasilkan prediksi yang lebih stabil dan akurat.
 
 #### Cara Kerja pada Dataset
-KNN menghitung jarak antara sebuah kendaraan baru dan kendaraan-kendaraan lain di dataset pelatihan, lalu mengambil rata-rata harga dari tetangga terdekat tersebut untuk menghasilkan prediksi.
+Random Forest membangun beberapa Decision Tree pada subset acak dari data dan fitur. Hasil prediksi dari semua pohon dirata-ratakan untuk menghasilkan prediksi akhir harga kendaraan.
 
 #### Parameter yang Digunakan
-- Model digunakan dengan nilai default untuk `k` (biasanya `k=5`).
-- Jarak dihitung menggunakan metrik Euclidean.
-- Tidak ada bobot khusus yang diterapkan pada tetangga.
+- Model digunakan dengan parameter random_state=36 dan lainnya default.
+- Tidak dilakukan tuning khusus dalam eksperimen ini.
 
 ### 3. **Decision Tree Regressor**
 
@@ -329,19 +328,20 @@ KNN menghitung jarak antara sebuah kendaraan baru dan kendaraan-kendaraan lain d
 Model ini membuat struktur pohon di mana setiap node merepresentasikan pengambilan keputusan berdasarkan fitur kendaraan. Hasil prediksi pada setiap leaf node adalah rata-rata dari data di subset tersebut.
 
 #### Parameter yang Digunakan
-- Model digunakan tanpa batasan khusus seperti `max_depth` atau `min_samples_split`.
+- Model digunakan dengan parameter random_state=36.
 - Menggunakan parameter default dari pustaka scikit-learn.
 
-### 4. **Random Forest Regressor**
+### 4. **K-Nearest Neighbors Regressor (KNN)**
 
-**Random Forest** adalah model ensemble yang menggabungkan banyak Decision Tree untuk menghasilkan prediksi yang lebih stabil dan akurat.
+**KNN Regressor** memprediksi harga kendaraan berdasarkan rata-rata dari `k` tetangga terdekat dalam ruang fitur.
 
 #### Cara Kerja pada Dataset
-Random Forest membangun beberapa Decision Tree pada subset acak dari data dan fitur. Hasil prediksi dari semua pohon dirata-ratakan untuk menghasilkan prediksi akhir harga kendaraan.
+KNN menghitung jarak antara sebuah kendaraan baru dan kendaraan-kendaraan lain di dataset pelatihan, lalu mengambil rata-rata harga dari tetangga terdekat tersebut untuk menghasilkan prediksi.
 
 #### Parameter yang Digunakan
-- Model digunakan dengan parameter default (`n_estimators` default = 100).
-- Tidak dilakukan tuning khusus dalam eksperimen ini.
+- Model digunakan dengan nilai default untuk `k` (biasanya `k=5`).
+- Tidak ada bobot khusus yang diterapkan pada tetangga.
+
 
 ---
 
