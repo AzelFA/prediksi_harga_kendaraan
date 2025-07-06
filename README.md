@@ -119,6 +119,7 @@ Dilihat dari _Tabel 1. Informasi Dataset_ dataset ini berisi informasi sebagai b
 - drivetrain (categorical): Tipe drivetrain kendaraan, seperti penggerak empat roda (4WD) atau penggerak dua roda (FWD).
 
 ### Informasi Dataset
+
 ![EDA Describe Data](https://github.com/user-attachments/assets/1fb877bd-18b8-499b-8db8-962e233df494)
 
 Gambar 2. Informasi Dataset
@@ -133,24 +134,31 @@ Gambar 2 merupakan informasi mengenai dataset yang digunakan
 
 ### Pengecekan Data Duplikat dan Missing Value
 -	Data Duplikat
+
 ![Data Duplikat](https://github.com/user-attachments/assets/9e166ea6-33d5-4cbc-b838-ee83b7b10b60)
+
 Gambar 3. Data Duplikat.
 
 Pada gambar tersebut, menjelaskan bahwa pada dataset ini memiliki 24 data yang terduplikat.
 
 -	Missing Value
+  
 ![Missing Value](https://github.com/user-attachments/assets/d9506df0-7468-4555-ad9e-6f8154775519)
+
 Gambar 4. Missing Value
 
 Pada gambar tersebut, menjelaskan bahwa pada dataset ini memiliki banyak missing value.
 
 Dengan adanya data terduplikat dan missing value, maka dilakukannya pengisian/penghapusan terhadap nilai tersebut untuk data menjadi bersih.
+
 ![Data Bersih](https://github.com/user-attachments/assets/a38f12fd-864f-4144-891c-0f76a21341e6)
+
 Gambar 5. Data Bersih
 
 ### Pengecekan Value Unik yang Ada Pada Dataset
 
 ![Value Unik](https://github.com/user-attachments/assets/209cb64c-37e9-4e7d-a26d-e48f8162a84f)
+
 Gambar 6. Value Unik
 
 Berdasarkan gambar di atas, berikut adalah deskripsi singkat mengenai banyaknya nilai unik dari masing-masing fitur dalam dataset:
@@ -192,6 +200,7 @@ Merupakan tahun produksi kendaraan. Nilai unik yang hanya 3 kemungkinan menunjuk
 ### EDA - Multivariate Analysis
 
 ![Gambar Corrmap](https://github.com/user-attachments/assets/ee986052-5724-4fb6-be36-063274aed226)
+
 Gambar 7. Heatmap Korelasi
 
 Heatmap pada gambar 7 ini menggambarkan korelasi antar fitur numerik seperti `year`, `price`, `cylinders`, `mileage`, dan `doors`. Temuan utama:
@@ -200,6 +209,7 @@ Heatmap pada gambar 7 ini menggambarkan korelasi antar fitur numerik seperti `ye
 - Fitur seperti `cylinders` memiliki korelasi lemah terhadap harga, namun tetap bisa relevan untuk model prediksi.
 
 ![Price - Body v DT](https://github.com/user-attachments/assets/6cbaa169-46e5-4927-831a-1c887159f719)
+
 Gambar 8. Harga berdasarkan Jenis Body dan Drivetrain
 
 Gambar 8 menunjukkan distribusi harga kendaraan berdasarkan jenis body (`body`) dan drivetrain (`drivetrain`). Hasil pengamatan menunjukkan:
@@ -208,6 +218,7 @@ Gambar 8 menunjukkan distribusi harga kendaraan berdasarkan jenis body (`body`) 
 - Tipe drivetrain juga memberikan pengaruh yang signifikan terhadap harga, di mana kendaraan dengan `All-wheel Drive` atau `Four-wheel Drive` cenderung memiliki harga lebih tinggi dibandingkan `Front-wheel Drive`.
 
 ![Mil v Price - fuel](https://github.com/user-attachments/assets/5053b55e-995d-43fd-972d-cfe82899eb3a)
+
 Gambar 9. Mileage vs Price berdasarkan Jenis Bahan Bakar
 
 Gambar 9 menunjukkan hubungan antara `mileage` (jarak tempuh) dan `price` (harga kendaraan), dengan pewarnaan (`hue`) berdasarkan jenis bahan bakar (`fuel`). Dari grafik terlihat bahwa:
@@ -218,22 +229,24 @@ Gambar 9 menunjukkan hubungan antara `mileage` (jarak tempuh) dan `price` (harga
 ### EDA - Univariate Analysis
 
 ![price hist](https://github.com/user-attachments/assets/0e4715fd-3a50-4b48-b11d-1af6c936151f)
+
 Gambar 10. Distribusi Harga Kendaraan
 
 Gambar 10 memperlihatkan distribusi harga dari seluruh kendaraan dalam dataset. Mayoritas kendaraan memiliki harga di kisaran **$30.000 hingga $60.000**, dengan penurunan frekuensi pada harga-harga yang lebih tinggi. Kurva KDE (Kernel Density Estimate) menunjukkan bahwa distribusi cenderung miring ke kanan, mengindikasikan adanya sejumlah kendaraan dengan harga yang jauh lebih tinggi (outlier).
 
 ![10 vehicle](https://github.com/user-attachments/assets/704dbec7-1a64-42bc-9c1d-2511a253619a)
+
 Gambar 11. 10 Merek Kendaraan Terbanyak
 
 Gambar 11 menunjukkan sepuluh merek kendaraan yang paling banyak muncul dalam dataset. **Jeep, RAM, dan Dodge** mendominasi jumlah entri. Hal ini menunjukkan bahwa dataset memiliki dominasi merek tertentu yang kemungkinan berasal dari dealer atau sumber data spesifik. Informasi ini penting karena merek dapat menjadi salah satu faktor utama dalam model prediksi harga.
 
-![fuel hist](https://github.com/user-attachments/assets/ada04ab3-2ef3-4bf6-b706-0b1551337910)
+![fuel hist](https://github.com/user-attachments/assets/e02b6850-3353-4469-92ec-d1cf9a6c20bf)
 
 Gambar 12. Distribusi Jenis Bahan Bakar
 
 Gambar 12 menggambarkan jumlah kendaraan berdasarkan jenis bahan bakarnya. Terlihat bahwa **Gasoline** adalah bahan bakar yang paling umum, diikuti oleh **Diesel** dan jenis lainnya. Data ini penting untuk mengetahui preferensi pasar dan juga dapat digunakan sebagai variabel dalam prediksi harga, karena bahan bakar dapat memengaruhi nilai kendaraan.
 
-![num hist](https://github.com/user-attachments/assets/ada04ab3-2ef3-4bf6-b706-0b1551337910)
+![num hist](https://github.com/user-attachments/assets/a17f4482-d82a-43f2-9d52-2a3f9c22109f)
 
 Gambar 13. Visualisasi semua kolom numerik
 
@@ -244,7 +257,7 @@ Gambar 13 memperlihatkan visualisasi semua kolom numerik dalam bentuk histogram.
 4. **Doors**: Sebagian besar kendaraan memiliki 4 pintu. Nilai lainnya seperti 2 atau 5 pintu jauh lebih sedikit.
 5. **Year**: Mayoritas kendaraan adalah keluaran tahun 2024, menunjukkan bahwa dataset ini lebih fokus pada kendaraan baru.
 
-![cat hist](https://github.com/user-attachments/assets/ada04ab3-2ef3-4bf6-b706-0b1551337910)
+![cat hist](https://github.com/user-attachments/assets/1ff50f3f-151a-44d5-ae80-f7da1501dffb)
 
 Gambar 14. Visualisasi kolom kategorikal
 
